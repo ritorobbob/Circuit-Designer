@@ -18,10 +18,13 @@ function draw() {
   
 }
 
-function mouseDragged() {
+function mousePressed() {
+  testComp.isMoving = true;
   testComp.clicked();
 }
-
+function mouseReleased() {
+  testComp.isMoving = false;
+}
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
