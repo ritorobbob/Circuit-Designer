@@ -19,10 +19,9 @@ function draw() {
 }
 
 function mouseDragged() {
-  console.log('pressed');
+  //console.log('being dragged');
   testComp.dragged();
-  //testComp.isMoving = 1;
-  //console.log(testComp.isMoving);
+
   
 }
 function mouseReleased() {

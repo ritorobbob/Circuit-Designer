@@ -17,7 +17,10 @@ class component {
         rect(this.x, this.y, this.size[0], this.size[1]);
     }
     dragged() {
-            if ((mouseX > (this.x - (this.size[0]/2)) && mouseX < (this.x + (this.size[0]/2))) && 
+            if (this.isMoving == 1){
+                console.log('moving');
+            }
+            else if((mouseX > (this.x - (this.size[0]/2)) && mouseX < (this.x + (this.size[0]/2))) && 
                 (mouseY > (this.y -(this.size[1]/2)) && mouseY < (this.y + (this.size[1]/2)))) {
             this.isMoving = 1;
         }
