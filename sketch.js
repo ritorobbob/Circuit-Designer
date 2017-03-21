@@ -1,33 +1,40 @@
 var img;
 var testComp;
+var test;
 function preload() {
   //img = loadImage("http://localhost:3000/dave.jpg");
 }
-
+function testFunc(){
+  console.log('heyy');
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  test = createElement('ja', 'he');
+ // test.position(20, 20);
   background(120);
+  //test.mouseOver(testFunc);
   testComp = new component('comp');
+  //testComp.rect.mouseOver(testFunc)
   console.log(component.name);
 }
 
 function draw() {
   background(120);
-  testComp.show();
+  //testComp.show();
   
 }
 
 function mouseDragged() {
-  //console.log('being dragged');
+  console.log('being dragged');
+  if (testComp.pressy){
+  console.log('dragloop')
   testComp.dragged();
-
+  }
+  console.log('skiped')
   
 }
-function mouseReleased() {
-  console.log('relsead');
-  testComp.isMoving = 0 ;
-}
+
 
 
 function windowResized() {
