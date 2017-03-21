@@ -19,10 +19,12 @@ function draw() {
 }
 
 function mousePressed() {
+  console.log('pressed');
   testComp.isMoving = true;
   testComp.clicked();
 }
 function mouseReleased() {
+  console.log('realeased');
   testComp.isMoving = false;
 }
 
