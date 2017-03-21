@@ -1,10 +1,11 @@
 class component {
+    var isMoving = false;
     constructor(name) {
+        console.log('construc')
         this.name = name;
         this.x = 40;
         this.y = 40;
-        this.size = [60, 60];
-        this.isMoving = false;
+        this.size = [60, 60];        
     }
     show() {
         rectMode(CENTER)
