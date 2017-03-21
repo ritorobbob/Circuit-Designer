@@ -11,6 +11,7 @@ function setup() {
   testComp = new component('comp');
   console.log(component.name);
   console.log('commit');
+  console.log('test2');
 }
 
 function draw() {
