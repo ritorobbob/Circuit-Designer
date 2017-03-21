@@ -10,8 +10,6 @@ function setup() {
   background(120);
   testComp = new component('comp');
   console.log(component.name);
-  console.log('commit');
-  console.log('test2');
 }
 
 function draw() {
