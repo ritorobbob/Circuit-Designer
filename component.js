@@ -18,6 +18,6 @@ class component {
         this.x = mouseX;
         this.y = mouseY;
         }
-        while(this.isMoving)}
+        }while(this.isMoving);
     }
 }
