@@ -18,12 +18,18 @@ function draw() {
   
 }
 
-function mousePressed() {
-  testComp.clicked();
+function mouseDragged() {
+  console.log('pressed');
+  testComp.dragged();
+  //testComp.isMoving = 1;
+  //console.log(testComp.isMoving);
+  
 }
-function mouseRelased(){
-  return true;
+function mouseReleased() {
+  console.log('relsead');
+  testComp.isMoving = 0 ;
 }
+
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
