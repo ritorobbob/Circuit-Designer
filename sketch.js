@@ -18,10 +18,12 @@ function draw() {
   
 }
 
-function mouseDragged() {
+function mousePressed() {
   testComp.clicked();
 }
-
+function mouseRelased(){
+  return true
+}
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
