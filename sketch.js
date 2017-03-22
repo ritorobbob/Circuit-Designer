@@ -8,16 +8,13 @@ function testFunc(){
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  test = createElement('ja', 'he');
- // test.position(20, 20);
+ // test = createElement('ja', 'he');
   background(120);
-  //test.mouseOver(testFunc);
   componentLst[0] = new component('comp');
 }
 
 function draw() {
   background(120);
-  //componentLst.show();
   
 }
 
@@ -34,5 +31,6 @@ function mouseDragged() {
 
 
 function windowResized() {
+    background(120);
   resizeCanvas(windowWidth, windowHeight);
 }

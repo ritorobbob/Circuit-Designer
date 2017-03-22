@@ -1,42 +1,40 @@
 class component {
     constructor(name) {
         this.name = name;
-        this.x = 40;
+        this.x = 40; //x and y property keeps track of the img dom element absolute position
         this.y = 40;
-        this.size = [60, 60];
         this.isMoving = 0;
-        this.isPress = 0;
-       // this.xoffset = 0;
-        //this.yoffset = 0;
+        this.isPress = 0; //keeps track of if the dom element has been clicked on and held
         this.img = createImg('https://upload.wikimedia.org/wikipedia/en/9/93/Wizard_troll_doll-low_res.jpg');
-        this.img.attribute("draggable", 'false');
+        this.img.attribute("draggable", 'false'); //stops the browser drag event as it creates a ghost image
         this.img.attribute("name", name);
-        this.img.position(this.x, this.y);
-        this.img.mousePressed(this.Pcallback.bind(this));
-        this.img.mouseReleased(this.Rcallback.bind(this));
+        this.img.position(this.x, this.y); 
+        this.img.mousePressed(this.PressedFnc.bind(this)); //called on mouse pressed over element element event
+        this.img.mouseReleased(this.ReleasedFnc.bind(this));
 
     }
-    Pcallback() {
+    PressedFnc() {
         this.isPress = 1;
-        this.xoffset = mouseX
+        //offset is so that when dragging an element the position is relavent to the origional mouse click pos 
+        this.xoffset = mouseX 
         this.yoffset = mouseY
         console.log('ispress' + this.isPress + this.xoffset);
     };
-    Rcallback() {
-        this.isPress = 0
+    ReleasedFnc() {
+        this.isPress = 0; //resets some variable that are used in draggin event
         this.xoffset = 0;
         this.yoffset = 0;
-         console.log(this.img.position().x);
-         this.x = (this.img.position().x)
-         this.y = (this.img.position().y)
+        console.log(this.img.position().x);
+        this.x = (this.img.position().x); //updates x and y to the new positions
+        this.y = (this.img.position().y);
         console.log(this.x);
     };
 
-   
+   //called when mouse is pressed over dowm element and moved
     dragged() {
         console.log('dragloop');
         console.log(this.xoffset);
         this.img.position(((mouseX - this.xoffset) + this.x), (mouseY - this.yoffset) + this.y);
-       // this.x = (mouseX)
+       
     }
 }
