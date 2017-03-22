@@ -31,7 +31,7 @@ function mouseDragged() {
   console.log('dragloop')
   testComp.dragged();
   }
-  console.log('skiped')
+
   
 }
 
