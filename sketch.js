@@ -1,9 +1,7 @@
 var img;
-var testComp;
+var componentLst = [];
 var test;
-function preload() {
-  //img = loadImage("http://localhost:3000/dave.jpg");
-}
+
 function testFunc(){
   console.log('heyy');
 }
@@ -14,22 +12,20 @@ function setup() {
  // test.position(20, 20);
   background(120);
   //test.mouseOver(testFunc);
-  testComp = new component('comp');
-  //testComp.rect.mouseOver(testFunc)
-  console.log(component.name);
+  componentLst[0] = new component('comp');
 }
 
 function draw() {
   background(120);
-  //testComp.show();
+  //componentLst.show();
   
 }
 
 function mouseDragged() {
   console.log('being dragged');
-  if (testComp.isPress === 1){
+  if (componentLst[0].isPress === 1){
   console.log('dragloop')
-  testComp.dragged();
+  componentLst[0].dragged();
   }
 
   
