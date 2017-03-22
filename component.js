@@ -32,9 +32,7 @@ class component {
         console.log(this.x);
     };
 
-    pressy() {
-        return (this.isPress === 1);
-    }
+   
     dragged() {
         console.log('dragloop');
         console.log(this.xoffset);

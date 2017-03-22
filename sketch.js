@@ -27,7 +27,7 @@ function draw() {
 
 function mouseDragged() {
   console.log('being dragged');
-  if (testComp.pressy){
+  if (testComp.isPress === 1){
   console.log('dragloop')
   testComp.dragged();
   }
