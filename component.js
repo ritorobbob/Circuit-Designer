@@ -1,4 +1,4 @@
-class component {
+class componentGraphics {
     constructor(name) {
         this.name = name;
         this.x = 40; //x and y property keeps track of the img dom element absolute position
@@ -11,7 +11,6 @@ class component {
         this.img.position(this.x, this.y); 
         this.img.mousePressed(this.PressedFnc.bind(this)); //called on mouse pressed over element element event
         this.img.mouseReleased(this.ReleasedFnc.bind(this));
-
     }
     PressedFnc() {
         this.isPress = 1;
@@ -36,5 +35,25 @@ class component {
         console.log(this.xoffset);
         this.img.position(((mouseX - this.xoffset) + this.x), (mouseY - this.yoffset) + this.y);
        
+    }
+}
+class componentMath extends component{
+    constructor(){
+        this.voltage;
+        this.current;
+        this.resistance;
+        this.position = {x: this.x, y: this.y}
+
+    }
+}
+class staticMath{
+    static isParrallel(x1, y1, x2, y2){
+        if(x1 == x2 && y1 !== y2){
+           return true 
+        }else if(x1 !== x2 && y1 == y2){
+            return true
+        }else{
+            return false
+        }
     }
 }
