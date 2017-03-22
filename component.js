@@ -56,5 +56,4 @@ class staticMath{
             return false
         }
     }
-    static isSeries
 }
