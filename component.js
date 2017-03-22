@@ -37,7 +37,7 @@ class componentGraphics {
        
     }
 }
-class componentMath extends component{
+class componentMath extends componentGraphics{
     constructor(){
         this.voltage;
         this.current;
@@ -56,4 +56,5 @@ class staticMath{
             return false
         }
     }
+    static isSeries
 }
