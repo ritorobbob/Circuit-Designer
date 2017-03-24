@@ -9,7 +9,7 @@ function logg(text){
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(120);
-  componentLst[0] = new component('comp');
+  componentLst[0] = new componentGraphics('comp');
 }
 
 function draw() {
