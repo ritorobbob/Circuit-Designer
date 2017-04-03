@@ -33,10 +33,13 @@ class componentGraphics {
     dragged() {
         console.log('dragloop');
         console.log(this.xoffset);
+        if ((mouseX - this.xoffset) + this.x < windowWidth - (100 + this.img.width)) {
         this.img.position(((mouseX - this.xoffset) + this.x), (mouseY - this.yoffset) + this.y);
-       
+        }
+     
     }
 }
+
 class componentMath extends componentGraphics{
     constructor(){
         this.voltage;
@@ -46,6 +49,7 @@ class componentMath extends componentGraphics{
 
     }
 }
+
 class staticMath{
     static isParrallel(x1, y1, x2, y2){
         if(x1 == x2 && y1 !== y2){
